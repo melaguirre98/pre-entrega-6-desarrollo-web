@@ -1,0 +1,72 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// Navbar de Bootstrap personalizada con la paleta propia
+.contenedor-nav {
+  max-width: $ancho-contenido-grande;
+  margin: 0 auto;
+}
+
+.brand-container {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  transition: opacity $transicion, transform $transicion;
+
+  img {
+    width: 50px;
+    height: auto;
+  }
+
+  @include hover-foco {
+    opacity: 0.85;
+    transform: scale(1.03);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.nav-lista {
+  gap: 0.5rem;
+}
+
+.nav-enlace {
+  color: $color-crema;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: $radio-chico;
+  transition: color $transicion, background-color $transicion;
+
+  @include hover-foco {
+    color: $color-naranja;
+    background-color: rgba($color-crema, 0.08);
+  }
+
+  &:active {
+    color: $color-marron-oscuro;
+    background-color: $color-naranja;
+  }
+}
+
+.navbar .nav-link.active {
+  color: $color-naranja;
+}
+
+.navbar-toggler {
+  border-color: $color-naranja;
+  transition: background-color $transicion, box-shadow $transicion;
+
+  &:hover {
+    background-color: rgba($color-naranja, 0.2);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0.25rem rgba($color-naranja, 0.5);
+  }
+
+  &:active {
+    background-color: rgba($color-naranja, 0.4);
+  }
+}

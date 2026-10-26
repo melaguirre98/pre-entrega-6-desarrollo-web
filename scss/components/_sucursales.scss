@@ -1,0 +1,31 @@
+@use "../utilities/mixins" as *;
+
+// Debe ir despues de _cards: ambos definen "li" con la misma especificidad
+.lista-sucursal {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+  font-size: 16px;
+  @include flex-columna(1.5rem);
+
+  li {
+    margin-bottom: 1rem;
+  }
+
+  // Solo en la pagina de sucursales: locales en columnas
+  .pagina-sucursales & {
+    @include tablet {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    @include desktop {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

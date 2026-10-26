@@ -1,0 +1,98 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+// Asignacion de areas para CSS Grid
+.seccion-propuesta {
+  grid-area: propuesta;
+}
+
+.seccion-destacados {
+  grid-area: destacados;
+}
+
+.seccion-galeria {
+  grid-area: galeria;
+}
+
+.seccion-carta {
+  grid-area: carta;
+}
+
+.seccion-bebidas {
+  grid-area: bebidas;
+}
+
+.seccion-panaderia {
+  grid-area: panaderia;
+}
+
+.seccion-faq {
+  grid-area: faq;
+}
+
+// Contenedor principal (mobile-first: 1 columna con areas apiladas)
+.contenido-principal {
+  max-width: $ancho-contenido;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-areas:
+    "propuesta"
+    "destacados";
+  grid-template-columns: 1fr;
+  gap: 2rem;
+
+  @include tablet {
+    grid-template-areas: "propuesta destacados";
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+    align-items: start;
+  }
+
+  @include desktop {
+    grid-template-columns: 2fr 1fr;
+    max-width: $ancho-contenido-grande;
+    gap: 2.5rem;
+  }
+}
+
+// Variantes de pagina (deben ir despues de .contenido-principal)
+.layout-home {
+  grid-template-areas:
+    "propuesta"
+    "destacados"
+    "galeria";
+
+  @include tablet {
+    grid-template-areas:
+      "propuesta destacados"
+      "galeria galeria";
+  }
+}
+
+.pagina-servicios {
+  grid-template-areas:
+    "carta"
+    "bebidas"
+    "panaderia"
+    "faq";
+
+  @include tablet {
+    grid-template-areas:
+      "carta bebidas"
+      "panaderia faq";
+  }
+}
+
+.pagina-sucursales {
+  @include tablet {
+    grid-template-areas:
+      "propuesta"
+      "destacados";
+    grid-template-columns: 1fr;
+  }
+}
+
+.seccion-contenido {
+  @include flex-columna(1rem);
+}

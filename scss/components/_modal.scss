@@ -1,0 +1,17 @@
+@use "../utilities/variables" as *;
+
+.modal-cafe {
+  background-color: $color-crema;
+  border-left: $ancho-acento solid $color-naranja;
+
+  .modal-title {
+    color: $color-marron;
+    font-size: 1.4rem;
+    margin-bottom: 0;
+  }
+
+  .list-group-item {
+    background-color: transparent;
+    color: $color-texto;
+  }
+}
