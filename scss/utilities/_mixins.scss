@@ -1,0 +1,36 @@
+@use "variables" as *;
+
+// Media queries mobile-first
+@mixin tablet {
+  @media (min-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+// Estados interactivos
+@mixin hover-foco {
+  &:hover,
+  &:focus-visible {
+    @content;
+  }
+}
+
+@mixin anillo-foco {
+  &:focus-visible {
+    outline: 3px solid $color-marron-oscuro;
+    outline-offset: 2px;
+  }
+}
+
+// Flex en columna con separacion
+@mixin flex-columna($gap) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}

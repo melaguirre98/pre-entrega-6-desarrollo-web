@@ -1,0 +1,41 @@
+@use "../utilities/variables" as *;
+
+@import url('https://fonts.googleapis.com/css2?family=BJCree:wght@400;500;600;700&family=Kedebideri:wght@400;500;600;700;800;900&display=swap');
+
+body {
+  font-family: $fuente-base;
+  font-size: 14px;
+  line-height: normal;
+  color: $color-texto;
+}
+
+h1 {
+  font-family: $fuente-marca;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: $color-marron-oscuro;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  font-family: $fuente-h2;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: $color-marron;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-family: $fuente-h3;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: $color-naranja;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: $color-texto;
+}

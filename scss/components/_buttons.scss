@@ -1,0 +1,47 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+.btn-cafe {
+  background-color: $color-naranja;
+  border: 2px solid $color-naranja;
+  color: $color-blanco;
+  font-weight: 600;
+  transition: background-color $transicion, border-color $transicion, transform $transicion-rapida;
+
+  @include hover-foco {
+    background-color: $color-marron;
+    border-color: $color-marron;
+    color: $color-blanco;
+  }
+
+  @include anillo-foco;
+
+  &:active {
+    background-color: $color-marron-oscuro !important;
+    border-color: $color-marron-oscuro !important;
+    color: $color-blanco !important;
+    transform: scale(0.97);
+  }
+}
+
+.btn-cafe-outline {
+  background-color: transparent;
+  border: 2px solid $color-marron;
+  color: $color-marron;
+  font-weight: 600;
+  transition: background-color $transicion, color $transicion, transform $transicion-rapida;
+
+  @include hover-foco {
+    background-color: $color-marron;
+    color: $color-blanco;
+  }
+
+  @include anillo-foco;
+
+  &:active {
+    background-color: $color-marron-oscuro !important;
+    border-color: $color-marron-oscuro !important;
+    color: $color-blanco !important;
+    transform: scale(0.97);
+  }
+}

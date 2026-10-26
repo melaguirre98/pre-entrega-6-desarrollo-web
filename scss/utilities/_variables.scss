@@ -1,0 +1,38 @@
+// Paleta de colores
+$color-marron-oscuro: #3c2218;
+$color-marron: #8c4a27;
+$color-naranja: #d97736;
+$color-crema: #f7f3ef;
+$color-texto: #2b2b2b;
+$color-gris: #666666;
+$color-blanco: #ffffff;
+
+// Colores del acordeon
+$color-acordeon-activo: #f1e3d8;
+$color-acordeon-borde: #e3d3c5;
+$color-acordeon-hover: #f7ece3;
+$color-acordeon-click: #ecd5c4;
+
+// Tipografias
+$fuente-base: 'Kedebideri', 'Poppins', sans-serif;
+$fuente-marca: 'BJCree', serif;
+$fuente-h2: 'Kedebideri', serif;
+$fuente-h3: 'Kedebideri', sans-serif;
+
+// Bordes
+$radio-chico: 6px;
+$radio-borde: 8px;
+$radio-imagen: 10px;
+$ancho-acento: 5px;
+
+// Transiciones
+$transicion: 0.3s ease;
+$transicion-rapida: 0.2s ease;
+
+// Anchos maximos
+$ancho-contenido: 900px;
+$ancho-contenido-grande: 1100px;
+
+// Breakpoints (mobile-first)
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
