@@ -6,14 +6,7 @@ body {
   color: #2b2b2b;
 }
 
-h1 {
-  font-family: "BJCree", serif;
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #3c2218;
-  margin-bottom: 0.5rem;
-}
-
+h1,
 h2 {
   font-family: "Kedebideri", serif;
   font-size: 1.8rem;
@@ -22,11 +15,12 @@ h2 {
   margin-bottom: 0.75rem;
 }
 
-h3 {
+h3,
+.subtitulo {
   font-family: "Kedebideri", sans-serif;
   font-size: 1.2rem;
   font-weight: 600;
-  color: #d97736;
+  color: #a9501a;
   margin-bottom: 0.5rem;
 }
 
@@ -50,6 +44,10 @@ body {
 
 img {
   max-width: 100%;
+}
+
+address {
+  margin-bottom: 0;
 }
 
 figure {
@@ -82,15 +80,16 @@ figcaption {
   color: #f7f3ef;
   padding: 0.5rem 1rem;
 }
-.header-principal h1 {
-  color: #f7f3ef;
-  font-size: 1.5rem;
-  margin-bottom: 0;
-}
 @media (min-width: 1024px) {
   .header-principal {
     padding: 0.5rem 2rem;
   }
+}
+
+.saltar-contenido {
+  background-color: #3c2218;
+  color: #f7f3ef;
+  padding: 0.5rem 1rem;
 }
 
 .contenedor-nav {
@@ -107,6 +106,12 @@ figcaption {
 .brand-container img {
   width: 50px;
   height: auto;
+}
+.brand-container .marca {
+  font-family: "BJCree", serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f7f3ef;
 }
 .brand-container:hover, .brand-container:focus-visible {
   opacity: 0.85;
@@ -301,7 +306,7 @@ figcaption {
   text-decoration: underline;
 }
 .pie-pagina a:active {
-  color: #8c4a27;
+  color: #ffffff;
 }
 @media (min-width: 1024px) {
   .pie-pagina {
@@ -334,6 +339,14 @@ figcaption {
 }
 .tarjeta-articulo li {
   margin-bottom: 0.4rem;
+}
+.tarjeta-articulo a {
+  color: #8c4a27;
+  text-underline-offset: 0.2em;
+  transition: color 0.3s ease;
+}
+.tarjeta-articulo a:hover, .tarjeta-articulo a:focus-visible {
+  color: #3c2218;
 }
 .tarjeta-articulo img {
   width: 100%;
@@ -388,8 +401,8 @@ figcaption {
 }
 
 .btn-cafe {
-  background-color: #d97736;
-  border: 2px solid #d97736;
+  background-color: #a9501a;
+  border: 2px solid #a9501a;
   color: #ffffff;
   transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }

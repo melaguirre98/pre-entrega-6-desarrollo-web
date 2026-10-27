@@ -29,6 +29,17 @@
     margin-bottom: 0.4rem;
   }
 
+  a {
+    color: $color-marron;
+    text-underline-offset: 0.2em;
+    transition: color $transicion;
+
+    &:hover,
+    &:focus-visible {
+      color: $color-marron-oscuro;
+    }
+  }
+
   img {
     width: 100%;
     max-width: 450px;

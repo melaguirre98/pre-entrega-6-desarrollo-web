@@ -32,7 +32,7 @@
 }
 
 .btn-cafe {
-  @include boton($color-naranja, $color-naranja, $color-blanco, $color-marron, $color-blanco);
+  @include boton($color-naranja-texto, $color-naranja-texto, $color-blanco, $color-marron, $color-blanco);
 }
 
 .btn-cafe-outline {

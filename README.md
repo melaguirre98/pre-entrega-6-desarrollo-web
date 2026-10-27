@@ -6,13 +6,18 @@ Sitio web de una cafetería de especialidad, desarrollado en el curso de Desarro
 
 ## Páginas
 - `index.html`: inicio, con galería (carousel) y horarios (modal)
-- `pages/servicios.html`: menú y preguntas frecuentes
-- `pages/proyectos.html`: sucursales
-- `pages/sobre-mi.html`: sobre nosotros
+- `pages/menu.html`: menú y preguntas frecuentes
+- `pages/sucursales.html`: sucursales
+- `pages/sobre-nosotros.html`: sobre nosotros
 - `pages/contacto.html`: contacto
 
 ## Tecnologías
 HTML5 semántico, SCSS (partials, variables, mixins con parámetros, `@extend`, `@for` y nesting), CSS Grid, Flexbox, Bootstrap 5.3 y AOS (animaciones al hacer scroll) por CDN, y Git/GitHub.
+
+## SEO y accesibilidad
+- Un `<h1>` propio por página, jerarquía de títulos correcta y `<title>` y `meta description` únicos.
+- Todas las imágenes con `alt` descriptivo y nombres de archivo representativos.
+- Contraste de color de texto verificado (mínimo 4,5:1) y enlace para saltar al contenido.
 
 ## Estructura de estilos
 Todo el CSS propio nace de los archivos `.scss`. `css/style.css` es solo el resultado de la compilación.
