@@ -28,8 +28,31 @@
   }
 }
 
+// Animacion nativa: los links de la navbar aparecen de a uno
+@keyframes aparecer-abajo {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 .nav-lista {
   gap: 0.5rem;
+
+  .nav-item {
+    @include animacion(aparecer-abajo);
+
+    @for $i from 1 through 5 {
+      &:nth-child(#{$i}) {
+        animation-delay: $retraso-animacion * $i;
+      }
+    }
+  }
 }
 
 .nav-enlace {
