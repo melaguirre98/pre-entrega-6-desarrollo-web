@@ -1,18 +1,9 @@
 @use "../utilities/variables" as *;
 @use "../utilities/mixins" as *;
 
-.btn-cafe {
-  background-color: $color-naranja;
-  border: 2px solid $color-naranja;
-  color: $color-blanco;
+// Estilos que comparten todos los botones (se reutiliza con @extend)
+%boton-base {
   font-weight: 600;
-  transition: background-color $transicion, border-color $transicion, transform $transicion-rapida;
-
-  @include hover-foco {
-    background-color: $color-marron;
-    border-color: $color-marron;
-    color: $color-blanco;
-  }
 
   @include anillo-foco;
 
@@ -24,24 +15,26 @@
   }
 }
 
-.btn-cafe-outline {
-  background-color: transparent;
-  border: 2px solid $color-marron;
-  color: $color-marron;
-  font-weight: 600;
-  transition: background-color $transicion, color $transicion, transform $transicion-rapida;
+// Mixin con parametros: crea una variante de boton con sus colores
+@mixin boton($fondo, $borde, $texto, $fondo-hover, $texto-hover) {
+  @extend %boton-base;
+
+  background-color: $fondo;
+  border: 2px solid $borde;
+  color: $texto;
+  transition: background-color $transicion, border-color $transicion, color $transicion, transform $transicion-rapida;
 
   @include hover-foco {
-    background-color: $color-marron;
-    color: $color-blanco;
+    background-color: $fondo-hover;
+    border-color: $fondo-hover;
+    color: $texto-hover;
   }
+}
 
-  @include anillo-foco;
+.btn-cafe {
+  @include boton($color-naranja, $color-naranja, $color-blanco, $color-marron, $color-blanco);
+}
 
-  &:active {
-    background-color: $color-marron-oscuro !important;
-    border-color: $color-marron-oscuro !important;
-    color: $color-blanco !important;
-    transform: scale(0.97);
-  }
+.btn-cafe-outline {
+  @include boton(transparent, $color-marron, $color-marron, $color-marron, $color-blanco);
 }

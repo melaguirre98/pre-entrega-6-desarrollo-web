@@ -9,6 +9,11 @@
 
 body {
   background-color: $color-crema;
+  overflow-wrap: break-word;
+}
+
+img {
+  max-width: 100%;
 }
 
 figure {
@@ -35,5 +40,6 @@ figcaption {
 @media (prefers-reduced-motion: reduce) {
   * {
     transition: none !important;
+    animation: none !important;
   }
 }

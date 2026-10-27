@@ -12,7 +12,7 @@ Sitio web de una cafetería de especialidad, desarrollado en el curso de Desarro
 - `pages/contacto.html`: contacto
 
 ## Tecnologías
-HTML5 semántico, SCSS (partials, variables, mixins y nesting), CSS Grid, Flexbox, Bootstrap 5.3 por CDN y Git/GitHub.
+HTML5 semántico, SCSS (partials, variables, mixins con parámetros, `@extend`, `@for` y nesting), CSS Grid, Flexbox, Bootstrap 5.3 y AOS (animaciones al hacer scroll) por CDN, y Git/GitHub.
 
 ## Estructura de estilos
 Todo el CSS propio nace de los archivos `.scss`. `css/style.css` es solo el resultado de la compilación.
