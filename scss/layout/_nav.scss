@@ -18,6 +18,13 @@
     height: auto;
   }
 
+  .marca {
+    font-family: $fuente-marca;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $color-crema;
+  }
+
   @include hover-foco {
     opacity: 0.85;
     transform: scale(1.03);

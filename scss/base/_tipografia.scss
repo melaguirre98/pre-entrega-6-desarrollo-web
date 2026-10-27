@@ -9,15 +9,8 @@ body {
   color: $color-texto;
 }
 
-h1 {
-  font-family: $fuente-marca;
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: $color-marron-oscuro;
-  margin-bottom: 0.5rem;
-}
-
-h2 {
+// Estilos compartidos, reutilizados con @extend
+%titulo-principal {
   font-family: $fuente-h2;
   font-size: 1.8rem;
   font-weight: 600;
@@ -25,12 +18,23 @@ h2 {
   margin-bottom: 0.75rem;
 }
 
-h3 {
+%titulo-secundario {
   font-family: $fuente-h3;
   font-size: 1.2rem;
   font-weight: 600;
-  color: $color-naranja;
+  color: $color-naranja-texto;
   margin-bottom: 0.5rem;
+}
+
+// h1 = titulo de cada pagina; .subtitulo = h2 con aspecto de titulo menor
+h1,
+h2 {
+  @extend %titulo-principal;
+}
+
+h3,
+.subtitulo {
+  @extend %titulo-secundario;
 }
 
 p {
